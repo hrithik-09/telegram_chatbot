@@ -21,8 +21,7 @@ async def gpt(message: types.Message):
                                          frequency_penalty=0.0,
                                          presence_penalty=0.0)
     await message.reply(response.choices[0].text)
-async def main():
-    # await bot.delete_webhook(  
+async def main(): 
     await dp.start_polling(bot)
 if __name__ == "__main__":
     asyncio.run(main())
